@@ -55,7 +55,7 @@ def get_weather(region):
     if int(response['daily'][0]["tempMin"]) <= 14:
         xigua = " 早上凉快，记得多穿点衣服哦~"
     if int(response['daily'][0]["tempMax"]) >= 28:
-        xigua = " 白天可能有点热哦，要不要考虑穿个裙子给我看吖~"
+        xigua = " 有点热呢，可以穿裙子给我看啦~"
     # 风向
     wind_dir = response['daily'][0]["windDirDay"]
     return weather, temp, wind_dir, xigua
@@ -167,11 +167,15 @@ def send_message(to_user, access_token, region_name, weather, temp, xigua, wind_
             },
             "note_en": {
                 "value": note_en,
-                "color": get_color()
+                "color": get_color(),
+                "word-wrap": "break-word",
+                "word-break": "normal"
             },
             "note_ch": {
                 "value": note_ch,
-                "color": get_color()
+                "color": get_color(),
+                "word-wrap": "break-word",
+                "word-break": "normal"
             },
             "xigua":{
                 "value": xigua,
