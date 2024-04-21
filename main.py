@@ -52,9 +52,9 @@ def get_weather(region):
     # 当前温度
     temp = response['daily'][0]["tempMin"]+ u"\N{DEGREE SIGN}" + "C"+'—'+response['daily'][0]["tempMax"]+ u"\N{DEGREE SIGN}" + "C"
     if int(response['daily'][0]["tempMin"]) <= 14:
-        xigua = "早上凉快，记得多穿点衣服哦~"
+        xigua = " 早上凉快，记得多穿点衣服哦~"
     else:
-        xigua = "今天的天气也很适合想我哦~"
+        xigua = " 今天的天气也很适合想我哦~"
     # 风向
     wind_dir = response['daily'][0]["windDirDay"]
     return weather, temp, wind_dir, xigua
