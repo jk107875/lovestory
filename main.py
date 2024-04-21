@@ -171,12 +171,24 @@ def send_message(to_user, access_token, region_name, weather, temp, xigua, wind_
                 "word-wrap": "break-word",
                 "word-break": "normal"
             },
+           "note_en1": {
+                 "value": note_en[:20],
+                 "color": get_color(),
+                 "word-wrap": "break-word",
+                 "word-break": "normal"
+             },
             "note_ch": {
                 "value": note_ch,
                 "color": get_color(),
                 "word-wrap": "break-word",
                 "word-break": "normal"
             },
+           "note_ch1": {
+                  "value": note_cn[:20],
+                  "color": get_color(),
+                  "word-wrap": "break-word",
+                  "word-break": "normal"
+              },
             "xigua":{
                 "value": xigua,
                 "color": get_color()
