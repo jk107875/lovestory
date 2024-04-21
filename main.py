@@ -130,6 +130,8 @@ def send_message(to_user, access_token, region_name, weather, temp, xigua, wind_
     love_date = date(love_year, love_month, love_day)
     # 获取在一起的日期差
     love_days = str(today.__sub__(love_date)).split(" ")[0]
+ note_ch1 = note_ch[20:]
+ note_eh1 = note_eh[20:]
     # 获取所有生日数据
     birthdays = {}
     for k, v in config.items():
@@ -172,7 +174,7 @@ def send_message(to_user, access_token, region_name, weather, temp, xigua, wind_
                 "word-break": "normal"
             },
            "note_en1": {
-                 "value": note_en[:20],
+                 "value": note_en1,
                  "color": get_color(),
                  "word-wrap": "break-word",
                  "word-break": "normal"
@@ -184,7 +186,7 @@ def send_message(to_user, access_token, region_name, weather, temp, xigua, wind_
                 "word-break": "normal"
             },
            "note_ch1": {
-                  "value": note_cn[:20],
+                  "value": note_cn1,
                   "color": get_color(),
                   "word-wrap": "break-word",
                   "word-break": "normal"
